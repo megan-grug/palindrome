@@ -13,18 +13,18 @@ function reverseString()
     
     function palindrome()
     {
-        let heading = document.getElementById('palindrome');
-        if (word == backwardsWord)
+      let heading = document.getElementById('palindrome');
+      
+      if (word !== "")
         {
-        heading.innerHTML = "This is a palindrome";
-        }
-        else 
-        {
-        heading.innerHTML = "Not a palindrome";
-        }
-    };
-  
-  console.log(backwardsWord);
+          if      (word == backwardsWord)
+                  {heading.innerHTML = "Omg, a palindrome!"}
+          else if (word !== backwardsWord)
+                  {heading.innerHTML = "Nah, that's not a palindrome!"}    
+        }  
+      else heading.innerHTML = "Please type in a word or phrase to try"
+    }
+    
   document.getElementById('output').value = backwardsWord;
   palindrome();
 }
